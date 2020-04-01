@@ -6,7 +6,7 @@
 > 
 > This is for a competition
 > 
-> More imformation is waiting for further improvement
+> More information is waiting for further improvement
 >
 > Thanks!
 >
