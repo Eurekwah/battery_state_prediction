@@ -10,6 +10,6 @@
 >
 > Thanks!
 >
->by Yuchen Zhang 
+>by  Zhang, Yuchen
 >
 > 2019-10-17
