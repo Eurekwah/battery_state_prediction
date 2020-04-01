@@ -76,4 +76,3 @@ for step in range(epochs):
         plt.pause(0.8)
         plt.close()
 plt.pause(0)   
-
