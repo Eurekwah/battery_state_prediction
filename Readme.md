@@ -10,6 +10,12 @@
 >
 > Thanks!
 >
->by Yuchen Zhang 
+>by  Zhang, Yuchen
 >
 > 2019-10-17
+>
+>Update CNN-LSTM and Simulink model with some test data and pictures 
+>
+>by Zhang, Yuchen
+>
+>2020.4.1

@@ -4,4 +4,8 @@
 ## MSELoss = 0.0006 
 ## 学习率为8e-3 使用Adam优化
 ## 每组数据之间不传递参数
+<<<<<<< HEAD
 ——ZHANG, Yuchen 2020.4.1
+=======
+——Zhang, Yuchen 2020.4.1
+>>>>>>> origin/master
