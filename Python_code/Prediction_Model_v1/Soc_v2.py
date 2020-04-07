@@ -7,14 +7,15 @@ from torch.autograd import Variable
 import time as tm
 import os
 import Soc_test_v2 as test
+import math
 
 
 INPUT_SIZE  = 7
 HIDDEN_SIZE = 48
 OUTPUT_SIZE = 1
 NUM_LAYERS  = 1
-RATE        = 8e-3
-EPOCH       = 800
+RATE        = 5e-3
+EPOCH       = 1500
 
 path = os.getcwd()
 #dir = os.listdir(path + '/smallNewModelData')
@@ -37,7 +38,7 @@ def get_pre():
     pre_data = []
     for i in datalist:
         pre_data.append(get_value(i))
-
+    print(datalist[-1])
     test_data = pre_data[-1]
     del pre_data[-1]
     return pre_data, test_data
@@ -74,7 +75,7 @@ class LSTM_CONV(nn.Module):
         
     def forward(self, x):
         x = self.conv(x)
-        #torch.nn.ReLU()
+        torch.nn.ReLU()
         #print(x.shape)
         x, _ = self.rnn(x)
         #print(x.shape)
@@ -96,7 +97,7 @@ def rest_time(seconds):
 # 训练
 net = LSTM_CONV().cuda()
 criterion = nn.MSELoss()
-optimizer = torch.optim.Adam(net.parameters(), lr = RATE)
+optimizer = torch.optim.Adam(net.parameters(), lr = RATE, betas=(0.9, 0.999), eps=1e-08)
 l = []
 def train(pre_data):
     print('begin')
@@ -112,13 +113,14 @@ def train(pre_data):
             loss.backward()
             optimizer.step()
             
-            time_end=tm.time()    
-            rest = (time_end - time_start) * 15 * (EPOCH - e + 1)
-            rest_time(rest)
-            time_start=tm.time()
+
         l.append(loss)
         if (e + 1) % 50 == 0:    
-            print('Epoch:{}, Loss:{:.5f}'.format(e+1, loss.item()))
+            time_end=tm.time()    
+            rest = (time_end - time_start) * (EPOCH - e) / 50
+            rest_time(rest)
+            time_start=tm.time()
+            print('Epoch:{}, Loss:{:.5f}'.format(e+1, math.sqrt(loss.item())))
     torch.save(net.state_dict(), 'net_params.pkl')    
     print('end')
     plt.plot(l)

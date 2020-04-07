@@ -6,6 +6,7 @@ from torch import nn
 from torch.autograd import Variable
 import time as tm
 import os
+import math
 
 INPUT_SIZE  = 7
 HIDDEN_SIZE = 48
@@ -64,11 +65,14 @@ def test(data_X, data_Y):
 
     test_loss = []
     for i in range(len(data_Y)):
-        test_loss.append(criterion(pred_test[i], data_Y[i]))
+        step_loss = math.sqrt(criterion(pred_test[i], data_Y[i]))
+        test_loss.append(step_loss)
 
 
-    print(loss)
 
+    print('RMSE:', math.sqrt(loss))
+    print('max RMSE:', np.max(test_loss))
+    print('average RMSE: ',np.mean(test_loss))
     plt.subplot(211)
     plt.plot(time, pred_test, 'r', label='prediction')
     plt.plot(time, data_Y, 'b', label='real')
@@ -76,5 +80,5 @@ def test(data_X, data_Y):
     plt.title('result')
     plt.subplot(212)
     plt.plot(time, test_loss)
-    plt.title('MSELoss')
+    plt.title('RMSELoss')
     plt.show()
