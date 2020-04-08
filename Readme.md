@@ -1,3 +1,9 @@
+---
+noteId: "a7b22930795a11ea88acd9ef9a4d234b"
+tags: []
+
+---
+
 # Battery state of charge prediction based on machine learning algorithm
 
 > Version 1.0 : Re-write the Electric vehicles and batteries simulation model, build a CNN-LSTM model for SOC prediction, the SOH is also considered.
@@ -5,7 +11,7 @@
 ## Cooperator
 - Xin Chen: Supervisor
 - Yuchen Zhang: SOC Prediction Model
-- Siyuan Liang, Peiyuan SUN: Electric Vehicles Model
+- Siyuan Liang, Peiyuan Sun: Electric Vehicles Model
 - Jiali Lu: Investigation
 
 
