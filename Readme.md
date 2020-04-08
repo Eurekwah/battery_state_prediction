@@ -104,8 +104,12 @@ Optimizer   = Adam
 
 ### Battery Module
 Use the PNGV model to descibe the port of the battery
-![battery_module](res/battery_module.png)
 
+#### Parameter Identification
+- Lithium battery SOC calculation block diagram based on PNGV model
+![battery_module](res/battery_module.png)
+- PNGV equivalent model
+![pngv_e](res/pngv_e.png)
 #### Simulation (Initial SOC = 90%)
 - State of Charge
 ![soc](res/battery_soc.png)
