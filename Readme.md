@@ -80,7 +80,7 @@ Optimizer   = Adam
 1. Operating input module
 2. Automotive speed control module 
 3. Torque conversion module 
-4. Vehicle mechanics module 
+4. Vehicle kinect module 
 5. Power conversion module 
 6. Thermodynamics module
 
@@ -95,11 +95,11 @@ Optimizer   = Adam
 
 - State of Charge
 ![soc](res/soc.png)
-- Speed
+- Velocity
 ![v](res/Ta.png)
 - Current
 ![I](res/I.png) 
-- Voltage
+- Terminal voltage
 ![Voltage](res/v.png)
 
 ### Battery Module
