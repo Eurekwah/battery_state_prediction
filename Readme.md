@@ -53,9 +53,9 @@ Optimizer   = Adam
 
 ### The pretiction result
 - SOC=83% RMSE=1.76%
-![83](res/83%SOC_RMSE_1.76%.png)
+![83](res/pred1.png)
 - SOC=90% RMSE=1.88%
-![83](res/90%SOC_RMSE_1.88%.png)
+![83](res/pred2.png)
 
 ### Sturcture 
 1. Run `main.py` to train the model
