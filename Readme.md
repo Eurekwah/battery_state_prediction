@@ -110,6 +110,8 @@ Use the PNGV model to descibe the port of the battery
 ![battery_module](res/battery_module.png)
 - PNGV equivalent model
 ![pngv_e](res/pngv_e.png)
+- OCV-SOC
+![ocv-soc](res/OCV-SOC.png)
 #### Simulation (Initial SOC = 90%)
 - State of Charge
 ![soc](res/battery_soc.png)
@@ -117,5 +119,3 @@ Use the PNGV model to descibe the port of the battery
 ![t](res/battery_temp.png)
 - Terminal Voltage
 ![v](res/battery_u.png)
-- OCV-SOC
-![ocv-soc](res/OCV-SOC.png)
