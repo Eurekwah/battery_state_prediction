@@ -27,7 +27,7 @@ Improve prediction accuracy and avoid the high errors near zero point by cutting
 
 ### Howto
 1. Download `smallNewModelData` dataset from [here](https://github.com/Eurekwah/battery_state_prediction/tree/master/Python_code/Prediction_Model_v1/smallNewModelData)
-2. Extract it like:
+2. Sturcture:
 ```shell
 Prediction_Model_v1/
 ├── smallNewModelData
